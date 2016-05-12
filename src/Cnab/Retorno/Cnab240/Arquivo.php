@@ -163,6 +163,16 @@ class Arquivo implements \Cnab\Retorno\IArquivo
 
         return $header_lote->data_credito ? \DateTime::createFromFormat('dmY', sprintf('%08d', $header_lote->data_credito)) : false;
     }
+    
+    /**
+     * Retorna o código cedente.
+     *
+     * @return string
+    */
+    public function getCedente()
+    {
+        return $this->header->getCedente();
+    }
 
     public function getCodigoConvenio()
     {
