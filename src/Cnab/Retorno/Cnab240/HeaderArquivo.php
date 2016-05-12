@@ -27,7 +27,16 @@ class HeaderArquivo extends \Cnab\Format\Linha
             return;
         }
     }
-
+    
+    public function getCedente()
+    {
+        if ($this->existField('codigo_cedente')) {
+            return $this->codigo_cedente;
+        } else {
+            return;
+        }
+    }
+    
     public function getCodigoConvenio()
     {
         if ($this->existField('codigo_convenio')) {
